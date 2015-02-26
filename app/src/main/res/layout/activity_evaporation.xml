@@ -6,7 +6,84 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context="com.musciano.adam.brewershandbook.calculators.Evaporation">
 
-    <TextView android:text="@string/hello_world" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <TextView android:text="Pre-Boil Wort:" android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/evaporation_labelPreBoilWort"
+        android:textSize="24dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="53dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/evaporation_editTextPreBoilWort"
+        android:layout_alignBottom="@+id/evaporation_labelPreBoilWort"
+        android:layout_toRightOf="@+id/evaporation_labelPreBoilWort"
+        android:layout_toEndOf="@+id/evaporation_labelPreBoilWort" />
+
+    <TextView
+        android:text="Boiling Time:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/evaporation_labelBoilTime"
+        android:textSize="24dp"
+        android:layout_below="@+id/evaporation_labelPreBoilWort"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:paddingTop="10dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/evaporation_editTextBoilingTime"
+        android:layout_alignBottom="@+id/evaporation_labelBoilTime"
+        android:layout_toRightOf="@+id/evaporation_labelBoilTime"
+        android:layout_toLeftOf="@+id/evaporation_labelTime"
+        android:layout_toStartOf="@+id/evaporation_labelTime" />
+
+    <TextView
+        android:text="Evaporation Rate: "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/evaporation_textViewEvapRate"
+        android:textSize="24dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:paddingTop="10dp" />
+
+    <TextView
+        android:text="Evaporation Loss: "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/evaporation_textViewEvapLoss"
+        android:textSize="24dp"
+        android:layout_below="@+id/evaporation_textViewEvapRate"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:paddingTop="10dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calculate"
+        android:id="@+id/evaporation_btnCalculate"
+        android:layout_above="@+id/evaporation_textViewEvapRate"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="mins"
+        android:id="@+id/evaporation_labelTime"
+        android:layout_alignBottom="@+id/evaporation_editTextBoilingTime"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>
