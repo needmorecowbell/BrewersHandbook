@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Brewers Handbook</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_calculator_menu">Calculator Menu</string>
+    <string name="title_activity_logging_menu">Logs</string>
+    <string name="title_activity_beer_guide_menu">Beer Guides</string>
+    <string name="title_activity_general_menu">General</string>
+    <string name="title_activity_wine_guide_menu">Wine Guides</string>
+    <string name="title_activity_references">References</string>
+    <string name="title_activity_about">About</string>
+    <string name="title_activity_absorption_loss">Absorption Loss Calculator</string>
+    <string name="title_activity_abv_abw">ABV/ABW Calculator</string>
+    <string name="title_activity_attenuation">Attenuation Calculator</string>
+    <string name="title_activity_cooling_loss">Cooling Loss Calculator</string>
+    <string name="title_activity_calories">Calories Calculator</string>
+    <string name="title_activity_degrees_plato">Degrees Plato Calculator</string>
+    <string name="title_activity_evaporation">Evaporation Calculator</string>
+    <string name="title_activity_hydrometer_temp">Hydrometer Temperature Correction</string>
+    <string name="title_activity_ibu">IBU Calculator</string>
+    <string name="title_activity_infusion_water">Infusion Water Calculator</string>
+    <string name="title_activity_priming_sugar">Priming Sugar Calculator</string>
+    <string name="title_activity_real_extract">Real Extract Calculator</string>
+    <string name="title_activity_srm">SRM Calculator</string>
+    <string name="title_activity_strike_water">Strike Water Calculator</string>
+
+</resources>

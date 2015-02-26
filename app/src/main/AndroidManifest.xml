@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.musciano.adam.brewershandbook" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".CalculatorMenu"
+            android:label="@string/title_activity_calculator_menu" >
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.musciano.adam.brewershandbook.MainActivity" />
+        </activity>
+        <activity
+            android:name=".LoggingMenu"
+            android:label="@string/title_activity_logging_menu" >
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.musciano.adam.brewershandbook.MainActivity" />
+        </activity>
+        <activity
+            android:name=".BeerGuideMenu"
+            android:label="@string/title_activity_beer_guide_menu" >
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.musciano.adam.brewershandbook.MainActivity" />
+        </activity>
+        <activity
+            android:name=".GeneralMenu"
+            android:label="@string/title_activity_general_menu" >
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.musciano.adam.brewershandbook.MainActivity" />
+        </activity>
+        <activity
+            android:name=".WineGuideMenu"
+            android:label="@string/title_activity_wine_guide_menu" >
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.musciano.adam.brewershandbook.MainActivity" />
+        </activity>
+        <activity
+            android:name=".References"
+            android:label="@string/title_activity_references" >
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.musciano.adam.brewershandbook.MainActivity" />
+        </activity>
+        <activity
+            android:name=".About"
+            android:label="@string/title_activity_about" >
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.musciano.adam.brewershandbook.MainActivity" />
+        </activity>
+        <activity
+            android:name=".calculators.AbsorptionLoss"
+            android:label="@string/title_activity_absorption_loss"
+            android:parentActivityName=".CalculatorMenu" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.musciano.adam.brewershandbook.CalculatorMenu" />
+        </activity>
+        <activity
+            android:name=".calculators.AbvAbw"
+            android:label="@string/title_activity_abv_abw"
+            android:parentActivityName=".CalculatorMenu" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.musciano.adam.brewershandbook.CalculatorMenu" />
+        </activity>
+        <activity
+            android:name=".calculators.Attenuation"
+            android:label="@string/title_activity_attenuation"
+            android:parentActivityName=".CalculatorMenu" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.musciano.adam.brewershandbook.CalculatorMenu" />
+        </activity>
+        <activity
+            android:name=".calculators.CoolingLoss"
+            android:label="@string/title_activity_cooling_loss" >
+            android:parentActivityName=".CalculatorMenu" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.musciano.adam.brewershandbook.CalculatorMenu" />
+        </activity>
+        <activity
+            android:name=".calculators.Calories"
+            android:label="@string/title_activity_calories"
+            android:parentActivityName=".CalculatorMenu" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.musciano.adam.brewershandbook.CalculatorMenu" />
+        </activity>
+        <activity
+            android:name=".calculators.DegreesPlato"
+            android:label="@string/title_activity_degrees_plato" >
+            android:parentActivityName=".CalculatorMenu" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.musciano.adam.brewershandbook.CalculatorMenu" />
+        </activity>
+        <activity
+            android:name=".calculators.Evaporation"
+            android:label="@string/title_activity_evaporation"
+            android:parentActivityName=".CalculatorMenu" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.musciano.adam.brewershandbook.CalculatorMenu" />
+        </activity>
+        <activity
+            android:name=".calculators.HydrometerTemp"
+            android:label="@string/title_activity_hydrometer_temp" >
+            android:parentActivityName=".CalculatorMenu" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.musciano.adam.brewershandbook.CalculatorMenu" />
+        </activity>
+        <activity
+            android:name=".calculators.IBU"
+            android:label="@string/title_activity_ibu" >
+            android:parentActivityName=".CalculatorMenu" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.musciano.adam.brewershandbook.CalculatorMenu" />
+        </activity>
+        <activity
+            android:name=".calculators.InfusionWater"
+            android:label="@string/title_activity_infusion_water"
+            android:parentActivityName=".CalculatorMenu" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.musciano.adam.brewershandbook.CalculatorMenu" />
+        </activity>
+        <activity
+            android:name=".calculators.PrimingSugar"
+            android:label="@string/title_activity_priming_sugar"
+            android:parentActivityName=".CalculatorMenu" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.musciano.adam.brewershandbook.CalculatorMenu" />
+        </activity>
+        <activity
+            android:name=".calculators.RealExtract"
+            android:label="@string/title_activity_real_extract" >
+            android:parentActivityName=".CalculatorMenu" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.musciano.adam.brewershandbook.CalculatorMenu" />
+        </activity>
+        <activity
+            android:name=".calculators.SRM"
+            android:label="@string/title_activity_srm"
+            android:parentActivityName=".CalculatorMenu" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.musciano.adam.brewershandbook.CalculatorMenu" />
+        </activity>
+        <activity
+            android:name=".calculators.StrikeWater"
+            android:label="@string/title_activity_strike_water" >
+            android:parentActivityName=".CalculatorMenu" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.musciano.adam.brewershandbook.CalculatorMenu" />
+        </activity>
+    </application>
+
+</manifest>
