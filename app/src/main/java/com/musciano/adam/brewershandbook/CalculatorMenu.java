@@ -38,7 +38,7 @@ public class CalculatorMenu extends ActionBarActivity {
     private void populateList(){
 
         //ALPHABETIZE
-        String [] titles = {"Absorption Loss Calculator","ABV/ABW Calculator","Apparent/Real Attenuation Calculator", "Cooling Loss Calculator","Calories Calculator",
+        String [] titles = {"Absorption Loss Calculator","ABV/ABW Calculator","Apparent/Real Attenuation Calculator","Calories Calculator", "Cooling Loss Calculator",
                 "Degrees Plato Calculator","Evaporation Loss/Rate Calculator", "Hydrometer Temperature Correction", "IBU Calculator",
                 "Infusion Water Calculator", "Priming Sugar Calculator","Real Extract Calculator","SRM Calculator","Strike Water Calculator"};
 

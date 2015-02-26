@@ -6,7 +6,110 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context="com.musciano.adam.brewershandbook.calculators.Calories">
 
-    <TextView android:text="@string/hello_world" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <TextView
+        android:text="Real Extract: "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24dp"
+        android:id="@+id/calories_labelABW"
+        android:layout_marginTop="44dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ABW: "
+        android:id="@+id/calories_labelAbw"
+        android:textSize="24dp"
+        android:layout_below="@+id/calories_labelABW"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:paddingTop="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Oz per Beer: "
+        android:id="@+id/calories_labelOz"
+        android:textSize="24dp"
+        android:paddingTop="10dp"
+        android:layout_below="@+id/calories_labelAbw"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/calories_editTextRealExt"
+        android:layout_alignBottom="@+id/calories_labelABW"
+        android:layout_toRightOf="@+id/calories_labelABW"
+        android:layout_toEndOf="@+id/calories_labelABW" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/calories_editTextABW"
+        android:layout_below="@+id/calories_labelABW"
+        android:layout_toRightOf="@+id/calories_labelAbw"
+        android:layout_alignRight="@+id/calories_editTextRealExt"
+        android:layout_alignEnd="@+id/calories_editTextRealExt" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/calories_editTextOz"
+        android:layout_below="@+id/calories_editTextABW"
+        android:layout_alignLeft="@+id/calories_editTextRealExt"
+        android:layout_alignStart="@+id/calories_editTextRealExt" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Final Gravity: "
+        android:id="@+id/calories_labelFG"
+        android:textSize="24dp"
+        android:paddingTop="10dp"
+        android:layout_below="@+id/calories_labelOz"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/calories_editTextFG"
+        android:layout_below="@+id/calories_editTextOz"
+        android:layout_toRightOf="@+id/calories_labelFG"
+        android:layout_toEndOf="@+id/calories_labelFG" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calories Per Beer: "
+        android:id="@+id/calories_textViewCalories"
+        android:textSize="24dp"
+        android:paddingTop="10dp"
+        android:layout_below="@+id/calories_labelFG"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="117dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calculate"
+        android:id="@+id/calories_btnCalculate"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/calories_editTextOz"
+        android:layout_alignStart="@+id/calories_editTextOz" />
 
 </RelativeLayout>
