@@ -6,7 +6,123 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context="com.musciano.adam.brewershandbook.calculators.Attenuation">
 
-    <TextView android:text="@string/hello_world" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/attenuation_switchRealApparent"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/attenuation_labelRealSwitch"
+        android:layout_toEndOf="@+id/attenuation_labelRealSwitch"
+        android:checked="false" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Real"
+        android:paddingRight="10dp"
+        android:id="@+id/attenuation_labelRealSwitch"
+        android:textSize="24dp"
+        android:layout_alignBottom="@+id/attenuation_switchRealApparent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Apparent"
+        android:id="@+id/attenuation_labelApparentSwitch"
+        android:layout_alignBottom="@+id/attenuation_switchRealApparent"
+        android:layout_toRightOf="@+id/attenuation_switchRealApparent"
+        android:layout_toEndOf="@+id/attenuation_switchRealApparent"
+        android:textSize="24dp"
+        android:paddingLeft="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Deg. Plato Start"
+        android:paddingRight="5dp"
+        android:id="@+id/textView"
+        android:textSize="24dp"
+        android:layout_below="@+id/attenuation_switchRealApparent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="57dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Deg. Plato Final"
+        android:paddingRight="5dp"
+        android:id="@+id/textView2"
+        android:textSize="24dp"
+        android:layout_below="@+id/textView"
+        android:paddingTop="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Real Extract"
+        android:paddingRight="5dp"
+        android:id="@+id/textView3"
+        android:textSize="24dp"
+        android:paddingTop="10dp"
+        android:layout_below="@+id/textView2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/attenuation_editTextPlatoStart"
+        android:layout_above="@+id/textView2"
+        android:layout_toRightOf="@+id/textView"
+        android:layout_toEndOf="@+id/textView" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/attenuation_editTextPlatoFinal"
+        android:layout_alignBottom="@+id/textView2"
+        android:layout_alignRight="@+id/attenuation_editTextPlatoStart"
+        android:layout_alignEnd="@+id/attenuation_editTextPlatoStart"
+        android:layout_toRightOf="@+id/textView"
+        android:layout_toEndOf="@+id/textView" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/attenuation_editTextRealExtract"
+        android:layout_alignBottom="@+id/textView3"
+        android:layout_toRightOf="@+id/textView3"
+        android:layout_toEndOf="@+id/textView3"
+        android:enabled="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calculate"
+        android:id="@+id/attenuation_btnCalc"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Attenuation: "
+        android:paddingRight="5dp"
+        android:id="@+id/attenuation_textViewAttenuation"
+        android:textSize="24dp"
+        android:paddingTop="5dp"
+        android:layout_below="@+id/attenuation_btnCalc"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="36dp" />
 
 </RelativeLayout>

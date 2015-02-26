@@ -28,14 +28,17 @@ public class AbsorptionLoss extends ActionBarActivity {
         btnCalculate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                InputMethodManager imm = (InputMethodManager)getSystemService(
-                        Context.INPUT_METHOD_SERVICE);
-                imm.hideSoftInputFromWindow(editTxtGrainAmnt.getWindowToken(), 0);
-                answer.setText("Absorption Loss: ");
-                Double grainAmnt = Double.parseDouble(editTxtGrainAmnt.getText().toString());
-                Double absorption= grainAmnt*.20;
+                if(!editTxtGrainAmnt.getText().toString().isEmpty()){
+                    InputMethodManager imm = (InputMethodManager)getSystemService(
+                            Context.INPUT_METHOD_SERVICE);
+                    imm.hideSoftInputFromWindow(editTxtGrainAmnt.getWindowToken(), 0);
+                    answer.setText("Absorption Loss: ");
+                    Double grainAmnt = Double.parseDouble(editTxtGrainAmnt.getText().toString());
+                    Double absorption= grainAmnt*.20;
 
-                answer.append(absorption.toString()+" gals");
+                    answer.append(absorption.toString()+" gals");
+
+                }
 
 
             }
