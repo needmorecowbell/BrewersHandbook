@@ -6,7 +6,66 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context="com.musciano.adam.brewershandbook.calculators.RealExtract">
 
-    <TextView android:text="@string/hello_world" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <TextView android:text="Plato Original:" android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/strike_labelRatio"
+        android:paddingTop="10dp"
+        android:textSize="24dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="53dp" />
+
+    <TextView
+        android:text="Plato Final:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/strike_labelGrainTemp"
+        android:paddingTop="10dp"
+        android:textSize="24dp"
+        android:layout_below="@+id/strike_labelRatio"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/real_editTextPlatoOrig"
+        android:layout_alignBottom="@+id/strike_labelRatio"
+        android:layout_toRightOf="@+id/strike_labelRatio"
+        android:layout_toEndOf="@+id/strike_labelRatio" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/strike_editTextGrainTemp"
+        android:layout_below="@+id/strike_labelRatio"
+        android:layout_toRightOf="@+id/strike_labelGrainTemp"
+        android:layout_toEndOf="@+id/strike_labelGrainTemp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calculate"
+        android:id="@+id/strike_btnCalc"
+        android:layout_below="@+id/strike_labelGrainTemp"
+        android:layout_toRightOf="@+id/strike_labelGrainTemp"
+        android:layout_toEndOf="@+id/strike_labelGrainTemp"
+        android:layout_marginTop="53dp" />
+
+    <TextView
+        android:text="Real Extract: "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/strike_textViewStrike"
+        android:paddingTop="15dp"
+        android:textSize="24dp"
+        android:layout_below="@+id/strike_btnCalc"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>

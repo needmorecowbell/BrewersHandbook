@@ -11,7 +11,6 @@ import android.view.inputmethod.InputMethodManager;
 
 import com.musciano.adam.brewershandbook.R;
 
-
 public class AbsorptionLoss extends ActionBarActivity {
 
     @Override

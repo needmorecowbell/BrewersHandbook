@@ -6,7 +6,130 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context="com.musciano.adam.brewershandbook.calculators.InfusionWater">
 
-    <TextView android:text="@string/hello_world" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <TextView android:text="Mash Temp:" android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/infusion_labelMashTemp"
+        android:textSize="24dp"
+        android:paddingTop="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="50dp" />
+
+    <TextView
+        android:text="Target Temp:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/infusion_labeltTargetTemp"
+        android:textSize="24dp"
+        android:paddingTop="10dp"
+        android:layout_below="@+id/infusion_labelMashTemp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="Water in Mash:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/infusion_labelWaterInMash"
+        android:textSize="24dp"
+        android:paddingTop="10dp"
+        android:layout_below="@+id/infusion_labeltTargetTemp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="Amount of Grain:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/infusion_labelGrainAmnt"
+        android:textSize="24dp"
+        android:paddingTop="10dp"
+        android:layout_below="@+id/infusion_labelWaterInMash"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="Infusion Water Temp:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/infusion_labelInfusionTemp"
+        android:textSize="24dp"
+        android:paddingTop="10dp"
+        android:layout_below="@+id/infusion_labelGrainAmnt"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calculate"
+        android:id="@+id/infusion_btnCalc"
+        android:layout_below="@+id/infusion_labelInfusionTemp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="52dp" />
+
+    <TextView
+        android:text="Infusion Water:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/infusion_textViewInfusion"
+        android:textSize="24dp"
+        android:paddingTop="15dp"
+        android:layout_below="@+id/infusion_btnCalc"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/infusion_editTextMashTemp"
+        android:layout_above="@+id/infusion_labeltTargetTemp"
+        android:layout_toRightOf="@+id/infusion_labeltTargetTemp"
+        android:layout_toEndOf="@+id/infusion_labeltTargetTemp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/infusion_editTextTargetTemp"
+        android:layout_above="@+id/infusion_labelWaterInMash"
+        android:layout_toEndOf="@+id/infusion_labelWaterInMash"
+        android:layout_below="@+id/infusion_editTextMashTemp"
+        android:layout_toRightOf="@+id/infusion_labelWaterInMash" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/infusion_editTextWaterInMash"
+        android:layout_below="@+id/infusion_editTextTargetTemp"
+        android:layout_toRightOf="@+id/infusion_labelWaterInMash"
+        android:layout_toEndOf="@+id/infusion_labelWaterInMash" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/infusion_editTextGrainAmnt"
+        android:layout_above="@+id/infusion_labelInfusionTemp"
+        android:layout_toEndOf="@+id/infusion_labelGrainAmnt"
+        android:layout_toRightOf="@+id/infusion_labelGrainAmnt" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/infusion_editTextInfusionTemp"
+        android:layout_above="@+id/infusion_btnCalc"
+        android:layout_below="@+id/infusion_editTextGrainAmnt"
+        android:layout_toRightOf="@+id/infusion_labelInfusionTemp"
+        android:layout_toEndOf="@+id/infusion_labelInfusionTemp" />
 
 </RelativeLayout>
