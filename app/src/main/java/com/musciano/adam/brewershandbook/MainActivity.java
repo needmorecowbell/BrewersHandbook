@@ -24,7 +24,7 @@ public class MainActivity extends ActionBarActivity {
     private void populateMainListBox(){
         String titles[]= {"Calculators","Logs","General","Wine Guides","Beer Guides","References","About This App"};
 
-        ArrayAdapter adapterMain= new ArrayAdapter<String>(this,R.layout.listview_template,titles);
+       ArrayAdapter adapterMain= new ArrayAdapter<String>(this,R.layout.listview_template,titles);
 
         ListView list =  (ListView)findViewById(R.id.listMain);
         list.setAdapter(adapterMain);
