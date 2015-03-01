@@ -1,5 +1,6 @@
 package com.musciano.adam.brewershandbook;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
@@ -22,7 +23,7 @@ import java.util.ArrayList;
 //USE SHARED PREFERENCES
 
 public class LoggingMenu extends ActionBarActivity {
-
+    final String DEFAULT="N/A";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,35 +61,31 @@ public class LoggingMenu extends ActionBarActivity {
     }
    private ArrayList<Brew>getBrews(){
         ArrayList <Brew> brews= new ArrayList<Brew>();
-        BufferedReader reader=null;
-        try {
-            reader = new BufferedReader(
-                    new InputStreamReader(getAssets().open("brewLog.txt")));
-            String curLine;
-           while((curLine=reader.readLine())!= null){
-               brews.add(getBrewFromString(curLine));
-           }
-        }catch (Exception e){
-            Toast.makeText(getApplicationContext(),"uh oh, file input went Wrong!",Toast.LENGTH_SHORT).show();
-        }finally {
-            try{
-                if(reader!=null){
-                    reader.close();
-                }
-            }catch (Exception e){
-            }
-        }
+       SharedPreferences brewLogs= getSharedPreferences("brewLogs",MODE_PRIVATE);
 
+        int x=0;
+       String curLine= brewLogs.getString("brew"+x,DEFAULT);
+       while(!curLine.equals(DEFAULT)){
+           brews.add(getBrewFromString(curLine));
+           x++;
+           curLine=brewLogs.getString("brew"+x,DEFAULT);
+       }
         return brews;
     }
 
     private Brew getBrewFromString(String s){
-        return null;
+        String elements[]= s.split(";");
+       return new Brew(elements[0],elements[1],elements[2],elements[3],elements[4],elements[5],elements[6]);
     }
-    private void fillFile(ArrayList<Brew> brews){
-        for(int x=0;x<brews.size();x++){
 
+    private void fillFile(ArrayList<Brew> brews){
+        SharedPreferences brewLogs= getSharedPreferences("brewLogs",MODE_PRIVATE);
+        SharedPreferences.Editor edit= brewLogs.edit();
+
+        for(int x=0;x<brews.size();x++){
+            edit.putString("brew"+x,brews.get(x).toString());
         }
+        edit.commit();
 
     }
 }
