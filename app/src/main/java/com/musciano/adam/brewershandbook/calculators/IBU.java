@@ -1,11 +1,17 @@
 package com.musciano.adam.brewershandbook.calculators;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.view.View;
+import android.view.inputmethod.InputMethodManager;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
 import com.musciano.adam.brewershandbook.R;
+
+import java.text.DecimalFormat;
 
 public class IBU extends ActionBarActivity {
 
@@ -13,28 +19,35 @@ public class IBU extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ibu);
+
+        final EditText editTextAA= (EditText)findViewById(R.id.ibu_editTextAlphaAcids);
+        final EditText editTextUtil= (EditText)findViewById(R.id.ibu_editTextUtil);
+        final EditText editTextOZ= (EditText)findViewById(R.id.ibu_editTextOz);
+        final Button btnCalc= (Button)findViewById(R.id.ibu_btnCalc);
+        final TextView textViewIBU= (TextView)findViewById(R.id.ibu_textViewIBU);
+
+        btnCalc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(!(editTextAA.getText().toString().isEmpty()&&editTextOZ.getText().toString().isEmpty()&&editTextUtil.getText().toString().isEmpty())){
+                    InputMethodManager imm = (InputMethodManager)getSystemService(
+                            Context.INPUT_METHOD_SERVICE);
+                    imm.hideSoftInputFromWindow(editTextOZ.getWindowToken(), 0);
+                    double alpha= Double.parseDouble(editTextAA.getText().toString());
+                    double util= Double.parseDouble(editTextUtil.getText().toString());
+                    double oz= Double.parseDouble(editTextOZ.getText().toString());
+
+                    double ibu= (alpha*oz*util)/7.25;
+
+                    DecimalFormat fmt= new DecimalFormat("###.##");
+
+                    textViewIBU.setText("IBU: ");
+                    textViewIBU.append(fmt.format(ibu));
+                }
+            }
+        });
     }
 
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_ibu, menu);
-        return true;
-    }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
 }
