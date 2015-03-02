@@ -25,5 +25,7 @@
     <string name="title_activity_real_extract">Real Extract Calculator</string>
     <string name="title_activity_srm">SRM Calculator</string>
     <string name="title_activity_strike_water">Strike Water Calculator</string>
+    <string name="title_activity_add_brew">Add Brew</string>
+    <string name="title_activity_brew_description">Brew Description</string>
 
 </resources>

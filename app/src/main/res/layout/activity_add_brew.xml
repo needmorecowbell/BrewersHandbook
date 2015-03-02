@@ -1,0 +1,187 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.musciano.adam.brewershandbook.AddBrew">
+
+    <TextView
+        android:id="@+id/bredesc_textViewName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="35dp"
+        android:paddingTop="10dp"
+        android:text="Name:"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/bredesc_textViewType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/bredesc_textViewName"
+        android:longClickable="false"
+        android:paddingTop="10dp"
+        android:text="Type of Brew:"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/bredesc_textViewOG"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/bredesc_textViewType"
+        android:paddingTop="10dp"
+        android:text="Original Gravity:"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/bredesc_textViewFG"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/bredesc_textViewOG"
+        android:paddingTop="10dp"
+        android:text="Final Gravity:"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/bredesc_textViewDateStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/bredesc_textViewFG"
+        android:paddingTop="10dp"
+        android:text="Date Started:"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/bredesc_textViewDateEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/bredesc_textViewDateStart"
+        android:paddingTop="10dp"
+        android:text="Date Finished:"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/bredesc_textViewName"
+        android:layout_toRightOf="@+id/bredesc_textViewName"
+        android:paddingTop="10dp"
+        android:text="*Note: all inputs are optional" />
+
+    <TextView
+        android:id="@+id/bredesc_textViewVol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/bredesc_textViewDateEnd"
+        android:paddingTop="10dp"
+        android:text="Volume:"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/addBrew_editTextType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bredesc_textViewOG"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_toEndOf="@+id/bredesc_textViewType"
+        android:layout_toRightOf="@+id/bredesc_textViewType" />
+
+    <EditText
+        android:id="@+id/addBrew_editTextName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/bredesc_textViewName"
+        android:layout_toRightOf="@+id/bredesc_textViewName" />
+
+    <EditText
+        android:id="@+id/addBrew_editTextOG"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bredesc_textViewFG"
+        android:layout_toEndOf="@+id/bredesc_textViewOG"
+        android:layout_toRightOf="@+id/bredesc_textViewOG"
+        android:ems="10"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/addBrew_editTextFG"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bredesc_textViewDateStart"
+        android:layout_toEndOf="@+id/bredesc_textViewFG"
+        android:layout_toRightOf="@+id/bredesc_textViewFG"
+        android:ems="10"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/addBrew_editTextDateStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bredesc_textViewDateEnd"
+        android:layout_toEndOf="@+id/bredesc_textViewType"
+        android:layout_toRightOf="@+id/bredesc_textViewType"
+        android:ems="10"
+        android:inputType="date" />
+
+    <EditText
+        android:id="@+id/addBrew_editTextDateEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/addBrew_editTextDateStart"
+        android:layout_alignStart="@+id/addBrew_editTextDateStart"
+        android:layout_below="@+id/addBrew_editTextDateStart"
+        android:ems="10"
+        android:inputType="date" />
+
+    <EditText
+        android:id="@+id/addBrew_editTextVolume"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/bredesc_textViewVol"
+        android:layout_toEndOf="@+id/bredesc_textViewVol"
+        android:layout_toRightOf="@+id/bredesc_textViewVol"
+        android:ems="10"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/addBrew_editTextVolume"
+        android:layout_toEndOf="@+id/addBrew_editTextVolume"
+        android:layout_toRightOf="@+id/addBrew_editTextVolume"
+        android:text="gals" />
+
+    <Button
+        android:id="@+id/addBrew_btnAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/addBrew_editTextVolume"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="45dp"
+        android:text="Add Brew" />
+
+</RelativeLayout>

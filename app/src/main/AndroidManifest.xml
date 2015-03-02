@@ -184,6 +184,17 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.musciano.adam.brewershandbook.CalculatorMenu" />
         </activity>
+        <activity
+            android:name=".AddBrew"
+            android:label="@string/title_activity_add_brew"></activity>
+        <activity
+            android:name=".BrewDescription"
+            android:label="@string/title_activity_brew_description"
+            android:parentActivityName=".LoggingMenu">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.musciano.adam.brewershandbook.LoggingMenu" />
+        </activity>
     </application>
 
 </manifest>
